@@ -187,15 +187,22 @@ img {
 footer {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+hr {
+  padding-left: 20px;
+  padding-right: 20px;
+  visibility: hidden;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 400;
-  padding-right: 30px;
 }
 
 /*=============== RESPONSIVE ===============*/
@@ -247,20 +254,23 @@ h4 {
   h3 {
     font-size: 4rem;
   }
+  .mainRight {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  img {
+    height: 60%;
+    width: 50%;
+    position: relative;
+    animation: animGhost ease-in-out 5s infinite;
+  }
 }
-.mainRight {
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-img {
-  height: 60%;
-  width: 50%;
-  position: relative;
-  animation: animGhost ease-in-out 5s infinite;
-}
+
+
+
 @media (min-width: 1px) and (max-width: 425px) {
   h3 {
     font-size: 3rem;
@@ -272,6 +282,17 @@ img {
   img {
     height: 80%;
   }
+  @keyframes animShadow {
+    0% {
+      width: 100px;
+    }
+    50% {
+      width: 140px;
+    }
+    100% {
+      width: 100px;
+    }
+  }  
 }
 
 
